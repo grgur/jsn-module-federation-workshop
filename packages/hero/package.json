@@ -24,5 +24,10 @@
   },
   "bugs": {
     "url": "https://github.com/grgur/jsn-module-federation-workshop/issues"
+  },
+  "dependencies": {
+    "date-fns": "^2.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   }
 }

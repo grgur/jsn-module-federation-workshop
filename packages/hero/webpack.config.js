@@ -2,6 +2,8 @@ const path = require('path');
 const { ModuleFederationPlugin } = require('webpack').container;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const pkgJson = require('./package.json');
+
 module.exports = () => {
   return {
     mode: 'development',
@@ -17,6 +19,16 @@ module.exports = () => {
           test: /\.jsx?$/,
           loader: 'babel-loader',
           exclude: /node_modules/,
+          options: {
+            presets: [
+              [
+                '@babel/preset-react',
+                {
+                  runtime: 'automatic',
+                },
+              ],
+            ],
+          },
         },
       ],
     },
@@ -28,6 +40,19 @@ module.exports = () => {
         name: 'hero',
         exposes: {
           './Vanilla': './src/vanilla.js',
+          './HeroComponent': './src/components/Hero.js',
+          './Birthday': './src/components/Birthday.js',
+        },
+        shared: {
+          ...pkgJson.dependencies,
+          react: {
+            requiredVersion: '^18.0.0',
+            singleton: true,
+          },
+          'react-dom': {
+            requiredVersion: '^18.0.0',
+            singleton: true,
+          },
         },
       }),
     ],

@@ -1,1 +1,1 @@
-import('./vanilla');
+import('./bootstrap');
