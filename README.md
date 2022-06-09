@@ -1,0 +1,1 @@
+# jsn-module-federation-workshop
