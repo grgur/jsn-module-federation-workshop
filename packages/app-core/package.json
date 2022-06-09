@@ -1,0 +1,28 @@
+{
+  "name": "app-core",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Grgur Grisogono <grgur@grgur.com>",
+  "homepage": "https://github.com/grgur/jsn-module-federation-workshop#readme",
+  "license": "ISC",
+  "main": "lib/app-core.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grgur/jsn-module-federation-workshop.git"
+  },
+  "scripts": {
+    "serve": "webpack-dev-server",
+    "build": "webpack",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/grgur/jsn-module-federation-workshop/issues"
+  }
+}
