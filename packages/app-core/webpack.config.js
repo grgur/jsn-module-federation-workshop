@@ -37,9 +37,9 @@ module.exports = () => {
       }),
       new ModuleFederationPlugin({
         name: 'core',
-        remotes: {
-          hero: 'hero@https://grgur-jsn-module-federation-workshop-jjxwwpq3qq57-8081.githubpreview.dev/hero.js',
-        },
+        // remotes: {
+        //   hero: 'hero@https://grgur-jsn-module-federation-workshop-jjxwwpq3qq57-8081.githubpreview.dev/hero.js',
+        // },
         shared: {
           ...pkgJson.dependencies,
           react: {
